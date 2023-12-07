@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="signup.css">
+    <title>signup</title>
+</head>
+<body>
+   
+    <div
+     id="signup">
+        <h1> Student SignUp</h1>
+
+        <form id="form">
+          <input type="text"id="fname"placeholder="Enter Your Firstname" ><br><br>
+           <input type="text"id="lname"placeholder="Enter Your Lastname"><br><br>
+          <input type="text"id="email"placeholder="Enter Your Email"><br><br>
+         <textarea placeholder="Enter your Addrerss" cols="40" rows="2"></textarea><br><br>
+
+           Select Gender: <br><br>
+           <input type="radio" id="male" name="gender">
+           <label for="male">Male</label>
+
+           <input type="radio" id="female" name="gender" >
+           <label for="female">Female</label>
+
+           <input type="radio" id="others"  name="gender">
+           <label for="others">Others</label><br><br>
+
+         <input type="number"id="phoneno"placeholder="Enter your Phonenumber"><br><br>
+          Select Course: <br><br>
+          <select>
+            <option>Select</option>
+            <option>CS</option>
+            <option>EC</option>
+            <option>ME</option>
+            <option>EE</option>
+           </select><br><br>
+
+          <input type="password" placeholder="Enter Strong Password"><br><br>
+           <button type="submit">SignUp</button>
+        </form>
+    </div>
+    <div class="confirmation"id="confirmmsg">
+    <h1>Thank you for your submission</h1>
+    </div>
+
+    <script>
+        document.getElementById('form').addEventListener('submit',function(event){
+            event.preventDefault();
+           document.getElementById('signup').style.display='none';
+            document.getElementById('confirmmsg').style.display='block';
+        });
+    </script>
+</body>
+</html>
